@@ -14,6 +14,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { ReactiveFormsModule } from '@angular/forms';
+import { MatMenuModule } from '@angular/material/menu';
 
 import { MatDialogModule } from '@angular/material/dialog';
 import { LoginErrorMessageDialog } from './dialogs/login-error-message';
@@ -40,6 +41,7 @@ import { PetComponent } from './pet/pet.component';
     MatInputModule,
     MatButtonModule,
     ReactiveFormsModule,
+    MatMenuModule,
     MatDialogModule
   ],
   providers: [],
