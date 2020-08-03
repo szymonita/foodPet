@@ -1,1 +1,87 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+  --background-color: #F9FBE7;
+  --background-component: #ffffff;
+  --grey-text: #9E9E9E
+}
+
+body {
+  background-color: var(--background-color);
+  margin: 0;
+}
+
+.mat-flat-button.mat-accent, .mat-raised-button.mat-accent, .mat-fab.mat-accent, .mat-mini-fab.mat-accent {
+  background-color: #FFC107;
+}
+
+.mat-toolbar.mat-primary {
+  background-color: #AEEA00;
+}
+
+.upper-toolbar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.upper-toolbars-logo {
+  flex: 1;
+}
+
+.upper-toolbars-language {
+  float: right;
+  flex: auto;
+}
+
+.upper-toolbars-language > p {
+  float: right;
+}
+
+.upper-toolbars-language > p > span:hover {
+  font-weight: 400;
+  cursor: pointer;
+}
+
+.footer {
+  color: var(--grey-text);
+  background-color: var(--background-color);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 5px;
+}
+
+.footer-year {
+  flex: 1;
+}
+
+.footer-legal {
+  float: right;
+  flex: auto;
+}
+
+.footer-legal > p {
+  float: right;
+}
+
+.footer-legal > p > span:hover {
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.login-container {
+  background-color: var(--background-component);
+  padding-top: 50px;
+  padding-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.dialog-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}

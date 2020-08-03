@@ -1,0 +1,60 @@
+<div class="login-container">
+
+  <h2>
+    Log in
+  </h2>
+
+  <form [formGroup]="loginForm" class="login-form">
+
+    <mat-card>
+
+      <mat-card-content>
+
+        <mat-form-field>
+          <mat-label>Email: </mat-label>
+          <input
+            matInput
+            formControlName="email"
+            placeholder="Your email">
+
+          <mat-error *ngIf="loginForm.hasError('required')">
+            This field is required.
+          </mat-error>
+
+          <mat-error *ngIf="!loginForm.hasError('required') && loginForm.hasError('email')">
+            Enter a valid email.
+          </mat-error>
+
+        </mat-form-field>
+
+        <br/>
+
+        <mat-form-field>
+          <mat-label>Password: </mat-label>
+          <input
+            matInput
+            formControlName="password"
+            placeholder="Your password"
+            type="password">
+        </mat-form-field>
+
+        <br/>
+
+        <button mat-raised-button color="accent" (click)="enterApp()">
+          OK!
+        </button>
+
+        <br/>
+        <br/>
+
+        <span>I forgot password</span>
+        <br/>
+        <span>Create account</span>
+
+      </mat-card-content>
+
+    </mat-card>
+
+  </form>
+
+</div>
