@@ -15,11 +15,13 @@ import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatMenuModule } from '@angular/material/menu';
-
 import { MatDialogModule } from '@angular/material/dialog';
+import { MatStepperModule } from '@angular/material/stepper';
+
 import { LoginErrorMessageDialog } from './dialogs/login-error-message';
 import { ErrorPageComponent } from './error-page/error-page.component';
 import { PetComponent } from './pet/pet.component';
+import { CreateAccountComponent } from './create-account/create-account.component';
 
 
 @NgModule({
@@ -30,7 +32,8 @@ import { PetComponent } from './pet/pet.component';
     LowerToolbarComponent,
     LoginErrorMessageDialog,
     ErrorPageComponent,
-    PetComponent
+    PetComponent,
+    CreateAccountComponent
   ],
   imports: [
     BrowserModule,
@@ -42,7 +45,8 @@ import { PetComponent } from './pet/pet.component';
     MatButtonModule,
     ReactiveFormsModule,
     MatMenuModule,
-    MatDialogModule
+    MatDialogModule,
+    MatStepperModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,20 +1,37 @@
 :root {
-  --background-color: #F9FBE7;
+  --background-color: #8BC34A;
+  --upper-component: #8BC34A;
   --background-component: #ffffff;
-  --grey-text: #9E9E9E
+  --white-text: #ffffff;
+  --accent: #FFC107;
+  --black-text: #000000;
 }
+
+/*#0277BD*/
 
 body {
   background-color: var(--background-color);
   margin: 0;
 }
 
+a {
+  color: var(--black-text);
+  text-decoration: none;
+  font-weight: 400;
+}
+
+a:hover {
+  color: var(--black-text);
+  text-decoration: none;
+  font-weight: 800;
+}
+
 .mat-flat-button.mat-accent, .mat-raised-button.mat-accent, .mat-fab.mat-accent, .mat-mini-fab.mat-accent {
-  background-color: #FFC107;
+  background-color: var(--accent);
 }
 
 .mat-toolbar.mat-primary {
-  background-color: #AEEA00;
+  background-color: var(--upper-component);
 }
 
 .upper-toolbar {
@@ -42,7 +59,7 @@ body {
 }
 
 .footer {
-  color: var(--grey-text);
+  color: var(--white-text);
   background-color: var(--background-color);
   display: flex;
   flex-direction: row;
@@ -84,4 +101,16 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+.create-account-container {
+  width: 100%;
+  background-color: var(--background-component);
+  padding-top: 50px;
+  padding-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
