@@ -4,6 +4,7 @@ export default class Pet {
   private _age: number;
   private _species: string;
   private _race: string;
+  private _sex: string;
   private _petLikes: string[];
   private _petDisLikes: string[];
   private _petAlergies: string[];

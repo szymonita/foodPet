@@ -1,1 +1,48 @@
-<p>pet works!</p>
+<div class="pet-container">
+
+  <div class="pet-bio">
+    <div class="pet-bio-item">
+      <img src="./assets/images/bercik.png" class="pet-image" />
+    </div>
+
+    <div class="pet-bio-item">
+        <h1>{{ pet.getName() }}</h1>
+
+        <p>Age: {{ pet.getAge() }}</p>
+        <p>Race: {{ pet.getRace() }}</p>
+    </div>
+  </div>
+
+  <div>
+    <h3>{{ pet.getName() }} likes:</h3>
+
+    <ul *ngFor="let like of pet.getPetLikes()">
+      <li>{{ like }} <b>&#10084;</b></li>
+    </ul>
+  </div>
+
+  <div>
+    <h3>{{ pet.getName() }} dislikes:</h3>
+
+    <ul *ngFor="let dislike of pet.getPetDislikes()">
+      <li>{{ dislike }} <b>&#10008;</b></li>
+    </ul>
+  </div>
+
+  <div>
+    <h3>{{ pet.getName() }} has alergies: </h3>
+
+    <ul *ngFor="let alergy of pet.getPetAlergies()">
+      <li>{{ alergy }}</li>
+    </ul>
+  </div>
+
+  <div>
+    <h3>Health Condition: </h3>
+
+    <ul *ngFor="let healthCondition of pet.getPetHealthConditions()">
+      <li>{{ healthCondition }}</li>
+    </ul>
+  </div>
+
+</div>

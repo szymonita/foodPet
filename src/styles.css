@@ -148,3 +148,31 @@ a:hover {
 .create-account-password-ul {
   color: var(--upper-component);
 }
+
+.pet-container {
+  background-color: var(--background-component);
+  padding-top: 50px;
+  padding-bottom: 50px;
+  padding-left: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: left;
+  text-align: left;
+}
+
+.pet-image {
+  border-radius: 50%;
+  width: 7rem;
+  height: 7rem;
+}
+
+.pet-bio {
+  display: flex;
+  flex-direction: row;
+  padding-left: 10px;
+}
+
+.pet-bio-item:nth-of-type(2) {
+  padding-left: 10px;
+}
