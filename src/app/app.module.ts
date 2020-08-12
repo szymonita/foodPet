@@ -22,6 +22,7 @@ import { LoginErrorMessageDialog } from './dialogs/login-error-message';
 import { ErrorPageComponent } from './error-page/error-page.component';
 import { PetComponent } from './pet/pet.component';
 import { CreateAccountComponent } from './create-account/create-account.component';
+import { AddPetComponent } from './add-pet/add-pet.component';
 
 
 @NgModule({
@@ -33,7 +34,8 @@ import { CreateAccountComponent } from './create-account/create-account.componen
     LoginErrorMessageDialog,
     ErrorPageComponent,
     PetComponent,
-    CreateAccountComponent
+    CreateAccountComponent,
+    AddPetComponent
   ],
   imports: [
     BrowserModule,
