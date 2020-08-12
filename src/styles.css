@@ -5,6 +5,7 @@
   --white-text: #ffffff;
   --accent: #FFC107;
   --black-text: #000000;
+  --grey: #e2e2e2;
 }
 
 /*#0277BD*/
@@ -26,12 +27,38 @@ a:hover {
   font-weight: 800;
 }
 
+.material-icons {
+  top: -40px;
+}
+
+.mat-card {
+  border-width: 2px;
+  border-style: solid;
+  border-color: var(--grey);
+}
+
+@media (max-width: 650px) {
+  .mat-card {
+    border: 0px solid var(--grey);
+    box-shadow: none !important;
+  }
+}
+
 .mat-flat-button.mat-accent, .mat-raised-button.mat-accent, .mat-fab.mat-accent, .mat-mini-fab.mat-accent {
   background-color: var(--accent);
 }
 
 .mat-toolbar.mat-primary {
   background-color: var(--upper-component);
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+
+.text-next-to-icon {
+  position: relative;
+  top: -5px;
+  left: 5px;
 }
 
 .upper-toolbar {
@@ -80,9 +107,8 @@ a:hover {
   float: right;
 }
 
-.footer-legal > p > span:hover {
-  font-weight: 800;
-  cursor: pointer;
+.footer-text {
+  font-weight: 550;
 }
 
 .login-container {
@@ -113,4 +139,12 @@ a:hover {
   align-items: center;
   justify-content: center;
   text-align: center;
+}
+
+.create-account-password {
+  text-align: left;
+}
+
+.create-account-password-ul {
+  color: var(--upper-component);
 }

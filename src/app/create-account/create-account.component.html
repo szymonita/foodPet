@@ -27,24 +27,81 @@
         </form>
       </mat-step>
 
+      <mat-step [stepControl]="emailGroup">
+        <form [formGroup]="emailGroup" class="login-form">
+          <ng-template matStepLabel>Fill your email</ng-template>
+            <mat-form-field>
+              <mat-label>Email</mat-label>
+              <input matInput placeholder="Your email" formControlName="email">
+            </mat-form-field>
+            <div>
+              <button mat-button matStepperPrevious>Back</button>
+              <button mat-button matStepperNext>Next</button>
+            </div>
+        </form>
+      </mat-step>
+
       <mat-step [stepControl]="userGroup">
         <form [formGroup]="userGroup" class="login-form">
-            <ng-template matStepLabel>Fill your name</ng-template>
+            <ng-template matStepLabel>Fill your login data</ng-template>
             <mat-form-field>
-              <mat-label>First name</mat-label>
-              <input matInput placeholder="First name" formControlName="userName">
+              <mat-label>User name</mat-label>
+              <input matInput placeholder="User name" formControlName="userName">
             </mat-form-field>
             <br/>
-            <mat-form-field>
-              <mat-label>Second name</mat-label>
-              <input matInput placeholder="Second name" formControlName="passwordName">
-            </mat-form-field>
+
           <div>
             <button mat-button matStepperPrevious>Back</button>
             <button mat-button matStepperNext>Next</button>
           </div>
         </form>
       </mat-step>
+
+      <mat-step [stepControl]="passwordGroup">
+        <form [formGroup]="passwordGroup" class="login-form">
+          <ng-template matStepLabel>Fill your password</ng-template>
+          <mat-form-field>
+            <mat-label>Password</mat-label>
+            <input
+              matInput
+              placeholder="Your password"
+              formControlName="passwordName"
+              type="password"
+              (keyup)="onPasswordType($event)">
+          </mat-form-field>
+
+          <div class="create-account-password">
+            <p>Password should have at least one special character, number, and 8 characters.</p>
+
+            <p>Your password has:</p>
+            <ul class="create-account-password-ul">
+              <li *ngIf="getIfPasswordHasSpecialCharacter()">One special character <b>&#10003;</b></li>
+              <li *ngIf="getIfPasswordHasNumber()">One number <b>&#10003;</b></li>
+              <li *ngIf="getIfPasswordHas8characters()">Eight characters <b>&#10003;</b></li>
+            </ul>
+
+            <p *ngIf="getIfPasswordAlright()">
+              Your password is <b>OK!</b>
+            <p>
+          </div>
+
+          <div>
+            <button mat-button matStepperPrevious>Back</button>
+            <button mat-button matStepperNext>Next</button>
+          </div>
+
+        </form>
+      </mat-step>
+
+      <mat-step>
+        <ng-template matStepLabel>Done</ng-template>
+        <p>Great. You can submit the form!</p>
+        <button mat-raised-button color="accent" (click)="sendUserData()">OK!</button>
+        <div>
+
+        </div>
+      </mat-step>
+
     </mat-vertical-stepper>
 
     </mat-card-content>
