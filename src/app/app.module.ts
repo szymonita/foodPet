@@ -17,6 +17,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatStepperModule } from '@angular/material/stepper';
+import { MatTabsModule } from '@angular/material/tabs';
 import { MatListModule } from '@angular/material/list';
 
 import { LoginErrorMessageDialog } from './dialogs/login-error-message';
@@ -50,6 +51,7 @@ import { AddPetComponent } from './add-pet/add-pet.component';
     MatMenuModule,
     MatDialogModule,
     MatStepperModule,
+    MatTabsModule,
     MatListModule
   ],
   providers: [],
