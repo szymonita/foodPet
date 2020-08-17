@@ -15,6 +15,7 @@ export default class Pet {
     age:number,
     species: string,
     race: string,
+    sex: string,
     petLikes: string[],
     petDisLikes: string[],
     petAlergies: string[],
@@ -24,6 +25,7 @@ export default class Pet {
     this._age = age;
     this._species = species;
     this._race = race;
+    this._sex = sex;
     this._petLikes = petLikes;
     this._petDisLikes = petDisLikes;
     this._petAlergies = petAlergies;

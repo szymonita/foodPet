@@ -15,6 +15,7 @@ export class PetComponent implements OnInit {
       1,
       'cat',
       'typical',
+      'male',
       ['tuna', 'chicken', 'swine'],
       ['liver', 'not tuna fish'],
       ['none'],
