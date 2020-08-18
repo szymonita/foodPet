@@ -184,3 +184,23 @@ a:hover {
 .pet-bio-ul {
   text-align: left;
 }
+
+.terms-container {
+  background-color: var(--background-component);
+  padding-top: 50px;
+  padding-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.footer-link {
+  color: white;
+}
+
+.footer-link:hover {
+  color: white;
+  font-weight: 800;
+}

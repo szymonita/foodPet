@@ -25,6 +25,7 @@ import { ErrorPageComponent } from './error-page/error-page.component';
 import { PetComponent } from './pet/pet.component';
 import { CreateAccountComponent } from './create-account/create-account.component';
 import { AddPetComponent } from './add-pet/add-pet.component';
+import { TermsComponent } from './terms/terms.component';
 
 
 @NgModule({
@@ -37,7 +38,8 @@ import { AddPetComponent } from './add-pet/add-pet.component';
     ErrorPageComponent,
     PetComponent,
     CreateAccountComponent,
-    AddPetComponent
+    AddPetComponent,
+    TermsComponent
   ],
   imports: [
     BrowserModule,
