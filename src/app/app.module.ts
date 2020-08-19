@@ -19,6 +19,7 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { MatStepperModule } from '@angular/material/stepper';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatListModule } from '@angular/material/list';
+import { MatSelectModule } from '@angular/material/select';
 
 import { LoginErrorMessageDialog } from './dialogs/login-error-message';
 import { ErrorPageComponent } from './error-page/error-page.component';
@@ -26,6 +27,7 @@ import { PetComponent } from './pet/pet.component';
 import { CreateAccountComponent } from './create-account/create-account.component';
 import { AddPetComponent } from './add-pet/add-pet.component';
 import { TermsComponent } from './terms/terms.component';
+import { CreatePetAccountComponent } from './create-pet-account/create-pet-account.component';
 
 
 @NgModule({
@@ -39,7 +41,8 @@ import { TermsComponent } from './terms/terms.component';
     PetComponent,
     CreateAccountComponent,
     AddPetComponent,
-    TermsComponent
+    TermsComponent,
+    CreatePetAccountComponent
   ],
   imports: [
     BrowserModule,
@@ -54,7 +57,8 @@ import { TermsComponent } from './terms/terms.component';
     MatDialogModule,
     MatStepperModule,
     MatTabsModule,
-    MatListModule
+    MatListModule,
+    MatSelectModule
   ],
   providers: [],
   bootstrap: [AppComponent]

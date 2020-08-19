@@ -1,5 +1,5 @@
 import * as express from 'express';
-import Pet from '../../../src/app/data-model/Pet';
+import Pet from '../../../data-model/entities/Pet';
 
 export class PetController {
   public path = '/api/pet';

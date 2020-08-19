@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { LoginComponent } from './login/login.component';
 import { CreateAccountComponent } from './create-account/create-account.component';
+import { CreatePetAccountComponent } from './create-pet-account/create-pet-account.component';
 import { PetComponent } from './pet/pet.component';
 import { TermsComponent } from './terms/terms.component';
 import { ErrorPageComponent } from './error-page/error-page.component';
@@ -15,6 +16,10 @@ const routes: Routes = [
   {
     path: 'createAccount',
     component: CreateAccountComponent
+  },
+  {
+    path: 'createPetAccount',
+    component: CreatePetAccountComponent
   },
   {
     path: 'pet',
