@@ -1,31 +1,34 @@
+import { Spec, Species } from './Species';
+
 class Breed {
-  private _displayValue: string;
-  private _value: number;
-  private _species: string;
+  private _breedName: string;
+  private _species: Spec;
 
   constructor(
-    displayValue:string,
-    value:number,
-    species:string
+    breedName:string,
+    species:Spec
   ) {
-    this._displayValue = displayValue;
-    this._value = value;
+    this._breedName = breedName;
     this._species = species;
   }
 
-  getDisplayValue() {
-    return this._displayValue;
+  getBreedName() {
+    return this._breedName;
   }
 
-  getValue() {
-    return this._value;
+  getSpecies() {
+    return this._species;
   }
 }
 
+//const cat = new Spec("Cat", 0);
+//const dog = new Spec("Dog", 1);
 
 const Breeds:Breed[] = [
-  new Breed("Norvegian", 0, "Cat"),
-  new Breed("Typical", 0, "Cat"),
+  new Breed("Norvegian", Species[0]),
+  new Breed("Typical", Species[0]),
+  new Breed("Buldog", Species[1]),
+  new Breed("Spaniel", Species[1]),
 ];
 
 export {

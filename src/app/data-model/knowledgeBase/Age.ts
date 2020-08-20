@@ -22,8 +22,8 @@ class Age {
 const Ages:Age[] = [
   new Age("Less than year", 0),
   new Age("1-2 years", 1),
-  new Age("3-7", 2),
-  new Age("8 and more", 3)
+  new Age("3-7 years", 2),
+  new Age("8 years and more", 3)
 ];
 
 export {

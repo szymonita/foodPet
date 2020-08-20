@@ -29,6 +29,8 @@ import { AddPetComponent } from './add-pet/add-pet.component';
 import { TermsComponent } from './terms/terms.component';
 import { CreatePetAccountComponent } from './create-pet-account/create-pet-account.component';
 
+import { SpeciesFilterPipe } from './utils/pipes/species-filter.pipe';
+
 
 @NgModule({
   declarations: [
@@ -42,7 +44,8 @@ import { CreatePetAccountComponent } from './create-pet-account/create-pet-accou
     CreateAccountComponent,
     AddPetComponent,
     TermsComponent,
-    CreatePetAccountComponent
+    CreatePetAccountComponent,
+    SpeciesFilterPipe
   ],
   imports: [
     BrowserModule,

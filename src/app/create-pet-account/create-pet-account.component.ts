@@ -19,16 +19,22 @@ export class CreatePetAccountComponent implements OnInit {
   selectedAge: number;
   ages: Age[];
   species: Spec[];
-  breeds: Breed[];
-  sexes: Sex[]
+  breedsUnfiltered: Breed[];
+  breedsFiltered: Breed[];
+  sexes: Sex[];
+
+  speciesSelected: boolean;
 
   constructor(private formBuilder: FormBuilder) { }
 
   ngOnInit(): void {
     this.ages = Ages;
     this.species = Species;
-    this.breeds = Breeds;
+    this.breedsUnfiltered = Breeds;
+    this.breedsFiltered = Breeds;
     this.sexes = Sexes;
+
+    this.speciesSelected = false;
 
     this.basicPetDataGroup = this.formBuilder.group({
       petName: ['', [
@@ -50,6 +56,16 @@ export class CreatePetAccountComponent implements OnInit {
         Validators.required
       ]]
     });
+  }
+
+  changeSpecies($event) {
+
+    this.breedsFiltered = this.breedsUnfiltered.filter((breed) => {
+      return breed.getSpecies().getValue() === $event.value;
+    });
+
+    this.speciesSelected = true;
+
   }
 
   sendPetData(){}

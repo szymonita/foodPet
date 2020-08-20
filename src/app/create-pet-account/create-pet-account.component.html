@@ -44,7 +44,8 @@
                 <mat-label>Pet's species</mat-label>
                 <mat-select
                   name="species"
-                  formControlName="petSpecies">
+                  formControlName="petSpecies"
+                  (selectionChange)="changeSpecies($event)">
                   <mat-option *ngFor="let spec of species" [value]="spec.getValue()">
                     {{ spec.getDisplayValue() }}
                   </mat-option>
@@ -53,13 +54,13 @@
 
               <br/>
 
-              <mat-form-field>
+              <mat-form-field *ngIf="speciesSelected">
                 <mat-label>Pet's breed</mat-label>
                 <mat-select
                   name="breed"
                   formControlName="petBreed">
-                  <mat-option *ngFor="let breed of breeds" [value]="breed.getValue()">
-                    {{ breed.getDisplayValue() }}
+                  <mat-option *ngFor="let breed of breedsFiltered" [value]="breed.getSpecies().getValue()">
+                    {{ breed.getBreedName() }}
                   </mat-option>
                 </mat-select>
               </mat-form-field>
