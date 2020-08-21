@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { LoginComponent } from './login/login.component';
-import { CreateAccountComponent } from './create-account/create-account.component';
-import { CreatePetAccountComponent } from './create-pet-account/create-pet-account.component';
-import { PetComponent } from './pet/pet.component';
-import { TermsComponent } from './terms/terms.component';
-import { ErrorPageComponent } from './error-page/error-page.component';
+import { LoginComponent } from './components/login/login.component';
+import { CreateAccountComponent } from './components/create-account/create-account.component';
+import { CreatePetAccountComponent } from './components/create-pet-account/create-pet-account.component';
+import { PetComponent } from './components/pet/pet.component';
+import { TermsComponent } from './components/terms/terms.component';
+import { ErrorPageComponent } from './components/error-page/error-page.component';
 
 const routes: Routes = [
   {

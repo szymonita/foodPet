@@ -1,6 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { UpperToolbarComponent } from '../upper-toolbar/upper-toolbar.component';
-import { LowerToolbarComponent } from '../lower-toolbar/lower-toolbar.component';
 
 @Component({
   selector: 'app-error-page',

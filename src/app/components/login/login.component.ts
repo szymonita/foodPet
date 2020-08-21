@@ -1,7 +1,7 @@
 import { Component, OnInit, Inject } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
-import { LoginErrorMessageDialog } from '../dialogs/login-error-message';
+import { LoginErrorMessageDialog } from '../../dialogs/login-error-message';
 
 @Component({
   selector: 'app-login',

@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { STEPPER_GLOBAL_OPTIONS } from '@angular/cdk/stepper';
-import { Age, Ages } from '../data-model/knowledgeBase/Age'
-import { Spec, Species } from '../data-model/knowledgeBase/Species';
-import { Breed, Breeds } from '../data-model/knowledgeBase/Breed';
-import { Sex, Sexes } from '../data-model/knowledgeBase/Sex';
 
+import { Age, Ages } from '../../data-model/knowledgeBase/Age'
+import { Spec, Species } from '../../data-model/knowledgeBase/Species';
+import { Breed, Breeds } from '../../data-model/knowledgeBase/Breed';
+import { Sex, Sexes } from '../../data-model/knowledgeBase/Sex';
 
 @Component({
   selector: 'app-create-pet-account',

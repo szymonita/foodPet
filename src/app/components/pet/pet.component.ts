@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import Pet from '../data-model/entities/Pet';
+import Pet from '../../data-model/entities/Pet';
 
 @Component({
   selector: 'app-pet',
@@ -16,7 +16,7 @@ export class PetComponent implements OnInit {
       'cat',
       'typical',
       'male',
-      ['tuna', 'chicken', 'swine'],
+      ['tuna', 'chicken', 'pork'],
       ['liver', 'not tuna fish'],
       ['none'],
       ['sterylized']
