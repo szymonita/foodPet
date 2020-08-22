@@ -21,9 +21,6 @@ class Breed {
   }
 }
 
-//const cat = new Spec("Cat", 0);
-//const dog = new Spec("Dog", 1);
-
 const Breeds:Breed[] = [
   new Breed("Norvegian", Species[0]),
   new Breed("Typical", Species[0]),

@@ -85,6 +85,66 @@
           </form>
         </mat-step>
 
+        <mat-step [stepControl]="foodPreferencePetDataGroup">
+          <form [formGroup]="foodPreferencePetDataGroup" class="form">
+              <ng-template matStepLabel>Fill pet's preference</ng-template>
+
+              <mat-form-field>
+                <mat-label>Pet likes</mat-label>
+                <mat-select
+                  name="petLikes"
+                  formControlName="petLikes"
+                  multiple>
+                  <mat-option *ngFor="let food of foods" [value]="food.getFoodCode()">
+                    {{ food.getFoodName() }}
+                  </mat-option>
+                </mat-select>
+              </mat-form-field>
+
+              <br/>
+
+              <mat-form-field>
+                <mat-label>Pet dislikes</mat-label>
+                <mat-select
+                  name="petDislikes"
+                  formControlName="petDislikes"
+                  multiple>
+                  <mat-option *ngFor="let food of foods" [value]="food.getFoodCode()">
+                    {{ food.getFoodName() }}
+                  </mat-option>
+                </mat-select>
+              </mat-form-field>
+
+            <div>
+              <button mat-button matStepperPrevious>Back</button>
+              <button mat-button matStepperNext>Next</button>
+            </div>
+          </form>
+        </mat-step>
+
+        <mat-step [stepControl]="healthPetDataGroup">
+          <form [formGroup]="healthPetDataGroup" class="form">
+              <ng-template matStepLabel>Fill health info</ng-template>
+
+              <mat-form-field>
+                <mat-label>Medical conditions</mat-label>
+                <mat-select
+                  name="medicalConditions"
+                  formControlName="medicalConditions"
+                  multiple>
+                  <mat-option *ngFor="let medicalCondition of medicalConditions" [value]="medicalCondition.getMedicalConditionCode()">
+                    {{ medicalCondition.getMedicalConditionName() }}
+                  </mat-option>
+                </mat-select>
+              </mat-form-field>
+
+            <div>
+              <button mat-button matStepperPrevious>Back</button>
+              <button mat-button matStepperNext>Next</button>
+            </div>
+          </form>
+        </mat-step>
+
         <mat-step>
           <ng-template matStepLabel>Done</ng-template>
           <p>Great. You can submit the form!</p>

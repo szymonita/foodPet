@@ -18,6 +18,7 @@ import { MatStepperModule } from '@angular/material/stepper';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatListModule } from '@angular/material/list';
 import { MatSelectModule } from '@angular/material/select';
+import { MatCheckboxModule } from '@angular/material/checkbox';
 
 import { LoginComponent } from './components/login/login.component';
 import { LoginErrorMessageDialog } from './dialogs/login-error-message';
@@ -60,7 +61,8 @@ import { SpeciesFilterPipe } from './utils/pipes/species-filter.pipe';
     MatStepperModule,
     MatTabsModule,
     MatListModule,
-    MatSelectModule
+    MatSelectModule,
+    MatCheckboxModule
   ],
   providers: [],
   bootstrap: [AppComponent]

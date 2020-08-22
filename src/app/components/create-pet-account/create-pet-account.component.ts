@@ -6,6 +6,9 @@ import { Age, Ages } from '../../data-model/knowledgeBase/Age'
 import { Spec, Species } from '../../data-model/knowledgeBase/Species';
 import { Breed, Breeds } from '../../data-model/knowledgeBase/Breed';
 import { Sex, Sexes } from '../../data-model/knowledgeBase/Sex';
+import { Food, Foods } from '../../data-model/knowledgeBase/Food';
+import { MedicalCondition, MedicalConditions } from '../../data-model/knowledgeBase/MedicalCondition';
+
 
 @Component({
   selector: 'app-create-pet-account',
@@ -15,6 +18,8 @@ import { Sex, Sexes } from '../../data-model/knowledgeBase/Sex';
 export class CreatePetAccountComponent implements OnInit {
   basicPetDataGroup: FormGroup;
   specificPetDataGroup: FormGroup;
+  foodPreferencePetDataGroup: FormGroup;
+  healthPetDataGroup: FormGroup;
 
   selectedAge: number;
   ages: Age[];
@@ -22,6 +27,8 @@ export class CreatePetAccountComponent implements OnInit {
   breedsUnfiltered: Breed[];
   breedsFiltered: Breed[];
   sexes: Sex[];
+  foods: Food[];
+  medicalConditions: MedicalCondition[];
 
   speciesSelected: boolean;
 
@@ -33,6 +40,8 @@ export class CreatePetAccountComponent implements OnInit {
     this.breedsUnfiltered = Breeds;
     this.breedsFiltered = Breeds;
     this.sexes = Sexes;
+    this.foods = Foods;
+    this.medicalConditions = MedicalConditions;
 
     this.speciesSelected = false;
 
@@ -55,6 +64,15 @@ export class CreatePetAccountComponent implements OnInit {
       petSex: ['', [
         Validators.required
       ]]
+    });
+
+    this.foodPreferencePetDataGroup = this.formBuilder.group({
+      petLikes: [''],
+      petDislikes: ['']
+    });
+
+    this.healthPetDataGroup = this.formBuilder.group({
+      medicalConditions: ['']
     });
   }
 
