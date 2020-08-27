@@ -28,6 +28,7 @@ import { CreateAccountComponent } from './components/create-account/create-accou
 import { AddPetComponent } from './components/add-pet/add-pet.component';
 import { TermsComponent } from './components/terms/terms.component';
 import { CreatePetAccountComponent } from './components/create-pet-account/create-pet-account.component';
+import { DataTermsComponent } from './components/data-terms/data-terms.component';
 
 import { SpeciesFilterPipe } from './utils/pipes/species-filter.pipe';
 
@@ -45,7 +46,8 @@ import { SpeciesFilterPipe } from './utils/pipes/species-filter.pipe';
     AddPetComponent,
     TermsComponent,
     CreatePetAccountComponent,
-    SpeciesFilterPipe
+    SpeciesFilterPipe,
+    DataTermsComponent
   ],
   imports: [
     BrowserModule,

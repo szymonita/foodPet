@@ -7,6 +7,7 @@ import { CreatePetAccountComponent } from './components/create-pet-account/creat
 import { PetComponent } from './components/pet/pet.component';
 import { TermsComponent } from './components/terms/terms.component';
 import { ErrorPageComponent } from './components/error-page/error-page.component';
+import { DataTermsComponent } from './components/data-terms/data-terms.component';
 
 const routes: Routes = [
   {
@@ -28,6 +29,10 @@ const routes: Routes = [
   {
     path: 'terms',
     component: TermsComponent
+  },
+  {
+    path: 'dataTerms',
+    component: DataTermsComponent
   },
   {
     path: '**',
