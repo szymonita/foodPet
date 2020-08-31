@@ -1,5 +1,7 @@
 <app-upper-toolbar></app-upper-toolbar>
 
-    <router-outlet></router-outlet>
+  <div [@slideAnimation]="outlet.isActivated ? outlet.activatedRoute : ''">
+    <router-outlet #outlet="outlet"></router-outlet>
+  </div>
 
 <app-lower-toolbar></app-lower-toolbar>
