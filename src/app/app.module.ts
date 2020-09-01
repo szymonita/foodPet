@@ -31,6 +31,7 @@ import { CreatePetAccountComponent } from './components/create-pet-account/creat
 import { DataTermsComponent } from './components/data-terms/data-terms.component';
 
 import { SpeciesFilterPipe } from './utils/pipes/species-filter.pipe';
+import { ForgotPasswordComponent } from './components/forgot-password/forgot-password.component';
 
 
 @NgModule({
@@ -47,7 +48,8 @@ import { SpeciesFilterPipe } from './utils/pipes/species-filter.pipe';
     TermsComponent,
     CreatePetAccountComponent,
     SpeciesFilterPipe,
-    DataTermsComponent
+    DataTermsComponent,
+    ForgotPasswordComponent
   ],
   imports: [
     BrowserModule,

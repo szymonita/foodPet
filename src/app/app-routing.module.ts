@@ -8,6 +8,7 @@ import { PetComponent } from './components/pet/pet.component';
 import { TermsComponent } from './components/terms/terms.component';
 import { ErrorPageComponent } from './components/error-page/error-page.component';
 import { DataTermsComponent } from './components/data-terms/data-terms.component';
+import { ForgotPasswordComponent } from './components/forgot-password/forgot-password.component';
 
 const routes: Routes = [
   {
@@ -33,6 +34,10 @@ const routes: Routes = [
   {
     path: 'dataTerms',
     component: DataTermsComponent
+  },
+  {
+    path: 'forgotPassword',
+    component: ForgotPasswordComponent
   },
   {
     path: '**',
