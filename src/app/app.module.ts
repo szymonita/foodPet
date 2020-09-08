@@ -29,9 +29,9 @@ import { AddPetComponent } from './components/add-pet/add-pet.component';
 import { TermsComponent } from './components/terms/terms.component';
 import { CreatePetAccountComponent } from './components/create-pet-account/create-pet-account.component';
 import { DataTermsComponent } from './components/data-terms/data-terms.component';
-
 import { SpeciesFilterPipe } from './utils/pipes/species-filter.pipe';
 import { ForgotPasswordComponent } from './components/forgot-password/forgot-password.component';
+import { BeginComponent } from './components/begin/begin.component';
 
 
 @NgModule({
@@ -49,7 +49,8 @@ import { ForgotPasswordComponent } from './components/forgot-password/forgot-pas
     CreatePetAccountComponent,
     SpeciesFilterPipe,
     DataTermsComponent,
-    ForgotPasswordComponent
+    ForgotPasswordComponent,
+    BeginComponent
   ],
   imports: [
     BrowserModule,

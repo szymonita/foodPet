@@ -2,6 +2,7 @@ import { Component, OnInit, Inject } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { LoginErrorMessageDialog } from '../../dialogs/login-error-message';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -13,7 +14,8 @@ export class LoginComponent implements OnInit {
 
   constructor(
     private formBuilder: FormBuilder,
-    public dialog: MatDialog
+    public dialog: MatDialog,
+    private router: Router
   ) { }
 
   ngOnInit(): void {
@@ -35,6 +37,8 @@ export class LoginComponent implements OnInit {
 
     if (login != form.email || password != form.password) {
       this.openDialog("Wrong login or password.");
+    } else {
+      this.router.navigateByUrl('/begin');
     }
   }
 

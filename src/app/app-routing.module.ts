@@ -9,11 +9,16 @@ import { TermsComponent } from './components/terms/terms.component';
 import { ErrorPageComponent } from './components/error-page/error-page.component';
 import { DataTermsComponent } from './components/data-terms/data-terms.component';
 import { ForgotPasswordComponent } from './components/forgot-password/forgot-password.component';
+import { BeginComponent } from './components/begin/begin.component';
 
 const routes: Routes = [
   {
     path: '',
     component: LoginComponent
+  },
+  {
+    path: 'begin',
+    component: BeginComponent
   },
   {
     path: 'createAccount',
