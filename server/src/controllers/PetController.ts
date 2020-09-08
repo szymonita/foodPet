@@ -1,5 +1,5 @@
 import * as express from 'express';
-import Pet from '../../../data-model/entities/Pet';
+import Pet from '../../../src/app/data-model/entities/Pet';
 
 export class PetController {
   public path = '/api/pet';
@@ -25,7 +25,8 @@ export class PetController {
         ['none'],
         ['sterylized']
       );
-      response.send(pet);
+      const pets = [pet];
+      response.send(pets);
   }
 }
 

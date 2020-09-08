@@ -4,41 +4,47 @@
     Pet account
   </h2>
 
-  <mat-card><mat-card-content>
+  <mat-card>
+    <mat-card-content>
 
-  <div class="pet-bio">
-    <div class="pet-bio-item">
-      <img src="./assets/images/bercik.png" class="pet-image" />
+      <div *ngFor="let pet of pets | async">
+
+        <div class="pet-bio">
+          <div class="pet-bio-item">
+            <img src="./assets/images/bercik.png" class="pet-image" />
+          </div>
+
+          <div class="pet-bio-item">
+              <h1>{{ pet.name }}</h1>
+
+              <p>Age: {{ pet.age }}</p>
+              <p>Race: {{ pet.race }}</p>
+          </div>
+        </div>
+
+        <mat-tab-group>
+          <mat-tab label="Likes">
+            <ul *ngFor="let like of pet.petLikes" class="pet-bio-ul">
+              <li>{{ like }} <span style="color: red;"><b>&#10084;</b></span></li>
+            </ul>
+          </mat-tab>
+
+          <mat-tab label="Dislikes">
+            <ul *ngFor="let dislike of pet.petDislikes" class="pet-bio-ul">
+              <li>{{ dislike }} <b>&#10008;</b></li>
+            </ul>
+          </mat-tab>
+
+          <mat-tab label="Health Condition">
+            <ul *ngFor="let healthCondition of pet.petHealthConditions" class="pet-bio-ul">
+              <li>{{ healthCondition }}</li>
+            </ul>
+          </mat-tab>
+        </mat-tab-group>
+
     </div>
 
-    <div class="pet-bio-item">
-        <h1>{{ pet.getName() }}</h1>
-
-        <p>Age: {{ pet.getAge() }}</p>
-        <p>Race: {{ pet.getRace() }}</p>
-    </div>
-  </div>
-
-  <mat-tab-group>
-    <mat-tab label="Likes">
-      <ul *ngFor="let like of pet.getPetLikes()" class="pet-bio-ul">
-        <li>{{ like }} <span style="color: red;"><b>&#10084;</b></span></li>
-      </ul>
-    </mat-tab>
-
-    <mat-tab label="Dislikes">
-      <ul *ngFor="let dislike of pet.getPetDislikes()" class="pet-bio-ul">
-        <li>{{ dislike }} <b>&#10008;</b></li>
-      </ul>
-    </mat-tab>
-
-    <mat-tab label="Health Condition">
-      <ul *ngFor="let healthCondition of pet.getPetHealthConditions()" class="pet-bio-ul">
-        <li>{{ healthCondition }}</li>
-      </ul>
-    </mat-tab>
-  </mat-tab-group>
-
-  </mat-card-content></mat-card>
+  </mat-card-content>
+</mat-card>
 
 </div>

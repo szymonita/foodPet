@@ -1,5 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { DataService } from '../../services/data.service'
 import Pet from '../../data-model/entities/Pet';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-pet',
@@ -7,24 +9,16 @@ import Pet from '../../data-model/entities/Pet';
   styleUrls: ['./pet.component.css']
 })
 export class PetComponent implements OnInit {
-  public pet: Pet;
+  pets: Observable<Pet[]>;
 
-  constructor() {
-    this.pet = new Pet(
-      'Bercik',
-      1,
-      'cat',
-      'typical',
-      'male',
-      ['tuna', 'chicken', 'pork'],
-      ['liver', 'not tuna fish'],
-      ['none'],
-      ['sterylized']
-    );
+  constructor(private dataService: DataService) {}
 
+  ngOnInit() {
+    this.getPet();
   }
 
-  ngOnInit(): void {
+  getPet() {
+    this.pets = this.dataService.getPet();
   }
 
 }
