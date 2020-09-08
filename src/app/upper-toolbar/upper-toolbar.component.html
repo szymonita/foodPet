@@ -7,21 +7,29 @@
       </button>
 
       <mat-menu #menu="matMenu">
-        <button mat-menu-item>
-          <span class="material-icons">account_circle</span>
-          <span class="text-next-to-icon">User account</span>
+        <button mat-menu-item class="menu">
+          <a routerLink="/begin">
+            <span class="material-icons">account_circle</span>
+            <span class="text-next-to-icon">Start</span>
+          </a>
         </button>
-        <button mat-menu-item>
-          <span class="material-icons">pets</span>
-          <span class="text-next-to-icon">Pet account</span>
+        <button mat-menu-item class="menu">
+          <a routerLink="/pet">
+            <span class="material-icons">pets</span>
+            <span class="text-next-to-icon">Pet</span>
+          </a>
         </button>
-        <button mat-menu-item>
-          <span class="material-icons">linked_camera</span>
-          <span class="text-next-to-icon">Scan products</span>
+        <button mat-menu-item class="menu">
+          <a routerLink="/scan">
+            <span class="material-icons">linked_camera</span>
+            <span class="text-next-to-icon">Scan</span>
+          </a>
         </button>
-        <button mat-menu-item>
-          <span class="material-icons">highlight_off</span>
-          <span class="text-next-to-icon">Logout</span>
+        <button mat-menu-item class="menu">
+          <a routerLink="/logout">
+            <span class="material-icons">highlight_off</span>
+            <span class="text-next-to-icon">Logout</span>
+          </a>
         </button>
       </mat-menu>
 

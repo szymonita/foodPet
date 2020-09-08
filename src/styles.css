@@ -53,6 +53,10 @@ a:hover {
   z-index: 2;
 }
 
+.menu:hover {
+  background-color: var(--grey);
+}
+
 .text-next-to-icon {
   position: relative;
   top: -5px;
@@ -107,6 +111,17 @@ a:hover {
 
 .footer-text {
   font-weight: 550;
+}
+
+.container {
+  background-color: var(--background-component);
+  padding-top: 50px;
+  padding-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
 .begin-container {

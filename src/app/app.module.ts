@@ -32,6 +32,8 @@ import { DataTermsComponent } from './components/data-terms/data-terms.component
 import { SpeciesFilterPipe } from './utils/pipes/species-filter.pipe';
 import { ForgotPasswordComponent } from './components/forgot-password/forgot-password.component';
 import { BeginComponent } from './components/begin/begin.component';
+import { ScanComponent } from './components/scan/scan.component';
+import { LogoutComponent } from './components/logout/logout.component';
 
 
 @NgModule({
@@ -50,7 +52,9 @@ import { BeginComponent } from './components/begin/begin.component';
     SpeciesFilterPipe,
     DataTermsComponent,
     ForgotPasswordComponent,
-    BeginComponent
+    BeginComponent,
+    ScanComponent,
+    LogoutComponent
   ],
   imports: [
     BrowserModule,

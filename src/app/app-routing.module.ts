@@ -10,6 +10,9 @@ import { ErrorPageComponent } from './components/error-page/error-page.component
 import { DataTermsComponent } from './components/data-terms/data-terms.component';
 import { ForgotPasswordComponent } from './components/forgot-password/forgot-password.component';
 import { BeginComponent } from './components/begin/begin.component';
+import { ScanComponent } from './components/scan/scan.component';
+import { LogoutComponent } from './components/logout/logout.component';
+
 
 const routes: Routes = [
   {
@@ -31,6 +34,14 @@ const routes: Routes = [
   {
     path: 'pet',
     component: PetComponent
+  },
+  {
+    path: 'scan',
+    component: ScanComponent
+  },
+  {
+    path: 'logout',
+    component: LogoutComponent
   },
   {
     path: 'terms',
