@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
+import { BarecodeScannerLivestreamModule } from 'ngx-barcode-scanner';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -73,7 +74,8 @@ import { LogoutComponent } from './components/logout/logout.component';
     MatListModule,
     MatSelectModule,
     MatCheckboxModule,
-    HttpClientModule
+    HttpClientModule,
+    BarecodeScannerLivestreamModule
   ],
   providers: [],
   bootstrap: [AppComponent]

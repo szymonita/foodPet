@@ -25,7 +25,7 @@ export class PetController {
         ['none'],
         ['sterylized']
       );
-      const pets = [pet];
+      const pets = [pet, pet, pet];
       response.send(pets);
   }
 }
