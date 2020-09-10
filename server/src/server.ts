@@ -1,29 +1,33 @@
 const express = require('express');
-import * as dotenv from 'dotenv';
 const cors = require('cors')
 const bodyParser = require('body-parser');
-import PetController from './controllers/PetController'
 
-const app = express();
-dotenv.config();
+import * as dotenv from 'dotenv';
+import PetController from './controllers/PetController'
 
 const controllers = [
   new PetController()
 ];
 
-app.use(cors());
-app.use(bodyParser.json());
+const app = express()
+              .use(cors())
+              .use(bodyParser.json())
+              .get('/', (req:any, res:any) => res.send('hello'));
 
-controllers.forEach((controller) => app.use('/', controller.router));
+controllers.forEach((controller:any) => {
+  app.use('/', controller.router)
+});
 
-if (process.env.LISTEN_PORT) {
-  app.get('/', (req:any, res:any) => res.send('hello'));
+dotenv.config();
+if (process.env.LISTEN_PORT && process.env.HOSTNAME) {
+
   app.listen(
     +process.env.LISTEN_PORT, 
-    '127.0.0.1', 
+    process.env.HOSTNAME, 
     () =>  { 
-      console.log('server is running');
+      console.log(`Server is running at: http://${process.env.HOSTNAME}:${+process.env.LISTEN_PORT}`);
     }
   );
+
 }
 
